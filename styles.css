@@ -168,6 +168,23 @@ h1,
   gap: 1.2rem;
 }
 
+.dessert-grid-empty {
+  min-height: 10rem;
+  place-items: center;
+  border: 1px dashed var(--brown-soft);
+  border-radius: 8px;
+  background: rgba(247, 217, 227, 0.28);
+}
+
+.empty-menu-message {
+  margin: 0;
+  padding: 2rem 1.2rem;
+  color: var(--brown);
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
 .dessert-card {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -289,6 +306,10 @@ h1,
 
 .lavender-icon {
   background: var(--lavender);
+}
+
+.rose-icon {
+  background: var(--pink);
 }
 
 .card-kicker {
