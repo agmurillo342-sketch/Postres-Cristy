@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Postres Cristy: postres caseros y pedidos por WhatsApp."
+    />
+    <title>Postres Cristy | Hecho con cariño</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#postres" aria-label="Ir al inicio de Postres Cristy">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Postres Cristy</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="#postres">Nuestros postres</a>
+          <a href="#pedidos">Haz tu pedido</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section desserts-section" id="postres" aria-labelledby="desserts-title">
+        <div class="section-heading">
+          <p class="eyebrow">Pequeños antojos, grandes momentos</p>
+          <h1 id="desserts-title">Nuestros postres</h1>
+          <p class="section-intro">
+            Preparados con ingredientes sencillos, mucho cariño y ese toque casero que se disfruta desde el primer bocado.
+          </p>
+        </div>
+
+        <div class="dessert-grid">
+          <!-- Para agregar otro postre: duplica una tarjeta .dessert-card, cambia el nombre, precio y la clase del visual. -->
+          <article class="dessert-card">
+            <div class="dessert-visual visual-cake" aria-label="Imagen de pastel de chocolate de ejemplo" role="img">
+              <span class="visual-sparkle" aria-hidden="true">✦</span>
+              <span class="visual-icon" aria-hidden="true">🍰</span>
+              <span class="visual-label">Pastel casero</span>
+            </div>
+            <div class="dessert-info">
+              <h2>Pastel de chocolate</h2>
+              <p class="price">$280 <span>MXN</span></p>
+            </div>
+          </article>
+
+          <!-- Ejemplo de tarjeta adicional: conserva esta estructura para sumar más productos. -->
+          <article class="dessert-card">
+            <div class="dessert-visual visual-strawberry" aria-label="Imagen de vasitos de fresa de ejemplo" role="img">
+              <span class="visual-sparkle" aria-hidden="true">♡</span>
+              <span class="visual-icon" aria-hidden="true">🍓</span>
+              <span class="visual-label">Fresco y dulce</span>
+            </div>
+            <div class="dessert-info">
+              <h2>Vasitos de fresa</h2>
+              <p class="price">$120 <span>MXN</span></p>
+            </div>
+          </article>
+
+          <!-- Ejemplo de tarjeta adicional: conserva esta estructura para sumar más productos. -->
+          <article class="dessert-card">
+            <div class="dessert-visual visual-cookies" aria-label="Imagen de galletas de mantequilla de ejemplo" role="img">
+              <span class="visual-sparkle" aria-hidden="true">✿</span>
+              <span class="visual-icon" aria-hidden="true">🍪</span>
+              <span class="visual-label">Recién horneadas</span>
+            </div>
+            <div class="dessert-info">
+              <h2>Galletas de mantequilla</h2>
+              <p class="price">$95 <span>MXN</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section orders-section" id="pedidos" aria-labelledby="orders-title">
+        <div class="section-heading">
+          <p class="eyebrow">Listo para consentirte</p>
+          <h2 id="orders-title">Haz tu pedido</h2>
+          <p class="section-intro">Elige lo que se te antoje y mándanos los detalles directamente por WhatsApp.</p>
+        </div>
+
+        <div class="order-grid">
+          <article class="order-card tortilla-card">
+            <div class="order-card-header">
+              <div class="order-icon mint-icon" aria-hidden="true">✺</div>
+              <div>
+                <p class="card-kicker">Para compartir</p>
+                <h3>Tortillas de harina</h3>
+              </div>
+            </div>
+            <p class="order-description">Paquete de tortillas de harina</p>
+            <p class="order-price">$50 <span>MXN</span></p>
+
+            <form id="tortilla-form" class="order-form">
+              <label for="tortilla-quantity">Cantidad de paquetes</label>
+              <input id="tortilla-quantity" name="quantity" type="number" min="1" value="1" required />
+              <button class="button button-primary" type="submit">
+                <span aria-hidden="true">↗</span>
+                Pedir por WhatsApp
+              </button>
+            </form>
+          </article>
+
+          <article class="order-card cake-card">
+            <div class="order-card-header">
+              <div class="order-icon lavender-icon" aria-hidden="true">✧</div>
+              <div>
+                <p class="card-kicker">A tu manera</p>
+                <h3>Pasteles</h3>
+              </div>
+            </div>
+            <p class="order-description">Cuéntanos cómo imaginas tu pastel.</p>
+
+            <form id="cake-form" class="order-form">
+              <fieldset>
+                <legend>1. Elige el tamaño</legend>
+                <div class="choice-grid size-options">
+                  <label class="choice-card">
+                    <input type="radio" name="cake-size" value="Chico" />
+                    <span>Chico</span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="radio" name="cake-size" value="Mediano" />
+                    <span>Mediano</span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="radio" name="cake-size" value="Grande" />
+                    <span>Grande</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset id="flavor-fieldset" class="flavor-fieldset" hidden>
+                <legend>2. Elige el sabor</legend>
+                <div class="choice-grid flavor-options">
+                  <label class="choice-card">
+                    <input type="radio" name="cake-flavor" value="Tres leches" />
+                    <span>Tres leches</span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="radio" name="cake-flavor" value="Chocolate" />
+                    <span>Chocolate</span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="radio" name="cake-flavor" value="Vainilla (sin tres leches)" />
+                    <span>Vainilla <small>(sin tres leches)</small></span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="radio" name="cake-flavor" value="Fresa" />
+                    <span>Fresa</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="decoration-field">
+                <label for="cake-decoration">Describe cómo quieres que se decore tu pastel</label>
+                <textarea id="cake-decoration" name="decoration" rows="4" placeholder="Ej. Con flores rosas y el nombre de la festejada"></textarea>
+              </div>
+
+              <button class="button button-primary" type="submit">
+                <span aria-hidden="true">↗</span>
+                Pedir por WhatsApp
+              </button>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><span aria-hidden="true">✦</span> Postres Cristy</p>
+      <p>Hecho con cariño para compartir.</p>
+    </footer>
+  </body>
+</html>
