@@ -56,3 +56,18 @@ cakeForm.addEventListener("submit", (event) => {
     `Hola, quiero hacer un pedido: 🎂 Pastel ${selectedSize.value}, sabor ${selectedFlavor.value}. Decoración: ${decorationText}`,
   );
 });
+
+const specialDessertForm = document.querySelector("#special-dessert-form");
+
+specialDessertForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const selectedDessert = document.querySelector('input[name="special-dessert"]:checked');
+
+  if (!selectedDessert) {
+    window.alert("Elige el postre que quieres pedir.");
+    return;
+  }
+
+  openWhatsApp(`Hola, quiero hacer un pedido: 🍰 ${selectedDessert.value}.`);
+});
