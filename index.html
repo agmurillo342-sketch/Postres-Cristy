@@ -27,7 +27,7 @@
         </a>
 
         <nav class="site-nav" aria-label="Navegación principal">
-          <a href="#postres">Nuestros postres</a>
+          <a href="#postres">Hoy contamos con</a>
           <a href="#pedidos">Haz tu pedido</a>
         </nav>
       </div>
@@ -37,51 +37,18 @@
       <section class="section desserts-section" id="postres" aria-labelledby="desserts-title">
         <div class="section-heading">
           <p class="eyebrow">Pequeños antojos, grandes momentos</p>
-          <h1 id="desserts-title">Nuestros postres</h1>
+          <h1 id="desserts-title">Hoy contamos con:</h1>
           <p class="section-intro">
-            Preparados con ingredientes sencillos, mucho cariño y ese toque casero que se disfruta desde el primer bocado.
+            Aquí podrás agregar el postre del día y su precio cuando quieras actualizar el menú.
           </p>
         </div>
 
-        <div class="dessert-grid">
-          <!-- Para agregar otro postre: duplica una tarjeta .dessert-card, cambia el nombre, precio y la clase del visual. -->
-          <article class="dessert-card">
-            <div class="dessert-visual visual-cake" aria-label="Imagen de pastel de chocolate de ejemplo" role="img">
-              <span class="visual-sparkle" aria-hidden="true">✦</span>
-              <span class="visual-icon" aria-hidden="true">🍰</span>
-              <span class="visual-label">Pastel casero</span>
-            </div>
-            <div class="dessert-info">
-              <h2>Pastel de chocolate</h2>
-              <p class="price">$280 <span>MXN</span></p>
-            </div>
-          </article>
-
-          <!-- Ejemplo de tarjeta adicional: conserva esta estructura para sumar más productos. -->
-          <article class="dessert-card">
-            <div class="dessert-visual visual-strawberry" aria-label="Imagen de vasitos de fresa de ejemplo" role="img">
-              <span class="visual-sparkle" aria-hidden="true">♡</span>
-              <span class="visual-icon" aria-hidden="true">🍓</span>
-              <span class="visual-label">Fresco y dulce</span>
-            </div>
-            <div class="dessert-info">
-              <h2>Vasitos de fresa</h2>
-              <p class="price">$120 <span>MXN</span></p>
-            </div>
-          </article>
-
-          <!-- Ejemplo de tarjeta adicional: conserva esta estructura para sumar más productos. -->
-          <article class="dessert-card">
-            <div class="dessert-visual visual-cookies" aria-label="Imagen de galletas de mantequilla de ejemplo" role="img">
-              <span class="visual-sparkle" aria-hidden="true">✿</span>
-              <span class="visual-icon" aria-hidden="true">🍪</span>
-              <span class="visual-label">Recién horneadas</span>
-            </div>
-            <div class="dessert-info">
-              <h2>Galletas de mantequilla</h2>
-              <p class="price">$95 <span>MXN</span></p>
-            </div>
-          </article>
+        <div class="dessert-grid dessert-grid-empty">
+          <!--
+            Para agregar el postre del día, duplica una tarjeta .dessert-card,
+            cambia el nombre y el precio, y elimina este mensaje.
+          -->
+          <p class="empty-menu-message">Próximamente encontrarás aquí el postre del día.</p>
         </div>
       </section>
 
@@ -169,6 +136,42 @@
                 <label for="cake-decoration">Describe cómo quieres que se decore tu pastel</label>
                 <textarea id="cake-decoration" name="decoration" rows="4" placeholder="Ej. Con flores rosas y el nombre de la festejada"></textarea>
               </div>
+
+              <button class="button button-primary" type="submit">
+                <span aria-hidden="true">↗</span>
+                Pedir por WhatsApp
+              </button>
+            </form>
+          </article>
+
+          <article class="order-card special-dessert-card">
+            <div class="order-card-header">
+              <div class="order-icon rose-icon" aria-hidden="true">♡</div>
+              <div>
+                <p class="card-kicker">Especialidades</p>
+                <h3>Chocoflanes y pays</h3>
+              </div>
+            </div>
+            <p class="order-description">Elige tu favorito y envíanos tu pedido.</p>
+
+            <form id="special-dessert-form" class="order-form">
+              <fieldset>
+                <legend>Elige tu postre</legend>
+                <div class="choice-grid flavor-options">
+                  <label class="choice-card">
+                    <input type="radio" name="special-dessert" value="Chocoflán" />
+                    <span>Chocoflán</span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="radio" name="special-dessert" value="Pay de piña" />
+                    <span>Pay de piña</span>
+                  </label>
+                  <label class="choice-card">
+                    <input type="radio" name="special-dessert" value="Pay de queso grande" />
+                    <span>Pay de queso grande</span>
+                  </label>
+                </div>
+              </fieldset>
 
               <button class="button button-primary" type="submit">
                 <span aria-hidden="true">↗</span>
